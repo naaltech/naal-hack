@@ -430,6 +430,7 @@ export default function HackathonPage() {
         <div className="container mx-auto px-4">
           <div className="text-center text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Nevzat Ayaz Anadolu Lisesi Hackathon Turnuvası. | Bu proje <a href="https://raw.githubusercontent.com/naaltech/naal-hack/refs/heads/main/LICENSE">GPLv3</a> ile lisanslanmıştır.</p>
+            <p>Açık Kaynak: <a href="https://github.com/naaltech/naal-hack">GitHub</a></p>
           </div>
         </div>
       </footer>
