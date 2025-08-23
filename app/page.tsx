@@ -386,8 +386,8 @@ export default function HackathonPage() {
       <footer className="bg-card border-t py-8">
         <div className="container mx-auto px-4">
           <div className="text-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Nevzat Ayaz Anadolu Lisesi Hackathon Turnuvası. | {t('footer.copyright')}</p>
-            <p>{t('footer.opensource')}: <a href="https://github.com/naaltech/naal-hack">GitHub</a></p>
+            <p>&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
+            <p>{t('footer.opensource')} <a href="https://github.com/naaltech/naal-hack">GitHub</a></p>
           </div>
         </div>
       </footer>

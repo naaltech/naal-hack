@@ -91,7 +91,7 @@
   },
   "registration": {
     "title": "Register Now",
-    "description": "Don't miss the opportunity to participate in Turkey's biggest hackathon event and shape the technologies of the future!",
+    "description": "Register now to participate in Turkey's first hackathon event between high schools and don't miss the opportunity to shape the technologies of the future!",
     "button": "Register Now"
   },
   "sponsors": {
@@ -174,8 +174,8 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "copyright": "© 2024 Nevzat Ayaz Anadolu Lisesi Hackathon Tournament. | This project is licensed under GPLv3.",
-    "opensource": "Open Source: GitHub"
+    "copyright": "Nevzat Ayaz Anadolu Lisesi Hackathon Tournament. | This project is licensed under GPLv3.",
+    "opensource": "Open Source:"
   },
   "eventEndedModal": {
     "title": "🎉 Event Ended!",

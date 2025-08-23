@@ -91,7 +91,7 @@
   },
   "registration": {
     "title": "Kayıt Ol",
-    "description": "Türkiye'nin en büyük hackathon etkinliğine katılmak için hemen kayıt olun ve geleceğin teknolojilerini şekillendirme fırsatını kaçırmayın!",
+    "description": "Türkiye'nin liseler arası ilk hackathon etkinliğine katılmak için hemen kayıt olun ve geleceğin teknolojilerini şekillendirme fırsatını kaçırmayın!",
     "button": "Hemen Kayıt Ol"
   },
   "sponsors": {
@@ -174,8 +174,8 @@
     "linkedin": "LinkedIn"
   },
   "footer": {
-    "copyright": "© 2024 Nevzat Ayaz Anadolu Lisesi Hackathon Turnuvası. | Bu proje GPLv3 ile lisanslanmıştır.",
-    "opensource": "Açık Kaynak: GitHub"
+    "copyright": "Nevzat Ayaz Anadolu Lisesi Hackathon Turnuvası. | Bu proje GPLv3 ile lisanslanmıştır.",
+    "opensource": "Açık Kaynak:"
   },
   "eventEndedModal": {
     "title": "🎉 Etkinlik Sona Erdi!",
