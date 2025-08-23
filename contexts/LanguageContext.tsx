@@ -23,10 +23,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Load language from localStorage or default to Turkish
+    // Sadece localStorage'dan dil tercihini yükle, varsayılan olarak Türkçe kullan
     const savedLanguage = localStorage.getItem('language') as Language
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'tr')) {
       setLanguage(savedLanguage)
+    } else {
+      // Varsayılan olarak Türkçe kullan ve localStorage'a kaydet
+      setLanguage('tr')
+      localStorage.setItem('language', 'tr')
     }
     setIsLoading(false)
   }, [])

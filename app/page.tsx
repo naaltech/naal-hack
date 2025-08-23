@@ -15,13 +15,13 @@ import { useLanguage } from "@/contexts/LanguageContext"
 export default function HackathonPage() {
   const { t, isLoading } = useLanguage()
   
-  // Show loading state while translations are being loaded
+  // Varsayılan olarak Türkçe kullan, loading state'i kısalt
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading...</p>
+          <p className="text-muted-foreground">Yükleniyor...</p>
         </div>
       </div>
     )
