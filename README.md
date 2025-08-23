@@ -1,8 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/438f0a78-2f3b-4b64-904d-f61f65bed9db/deploy-status)](https://app.netlify.com/projects/naalhack/deploys)
-
-# Naal'Hack Website
+# NaalHack Website
 
 Official website for Naal'Hack - Turkey's first inter-high school hackathon competition.
+
+<img width="1915" height="947" alt="resim" src="https://github.com/user-attachments/assets/a6ede804-a0e3-4bc3-9965-bcd4266ff4c7" />
 
 ## Features
 
