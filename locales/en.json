@@ -33,42 +33,22 @@
     "tbd": "TBD",
     "schedule": {
       "day1": {
-        "title": "April 27 - Friday",
+        "title": "April 27 - Saturday",
         "events": [
           {
-            "time": "18:00",
+            "time": "08:30",
             "activity": "Registration and Welcome",
             "type": "Start"
           },
           {
-            "time": "19:00",
+            "time": "09:00",
             "activity": "Opening Speech",
             "type": "Speech"
           },
           {
-            "time": "20:00",
-            "activity": "Team Formation",
-            "type": "Networking"
-          },
-          {
-            "time": "21:00",
+            "time": "09:30",
             "activity": "Hackathon Begins",
             "type": "Coding"
-          }
-        ]
-      },
-      "day2": {
-        "title": "April 28 - Saturday",
-        "events": [
-          {
-            "time": "09:00",
-            "activity": "Breakfast",
-            "type": "Food"
-          },
-          {
-            "time": "10:00",
-            "activity": "Mentor Sessions",
-            "type": "Mentoring"
           },
           {
             "time": "13:00",
@@ -76,14 +56,44 @@
             "type": "Food"
           },
           {
-            "time": "14:00",
-            "activity": "Workshop: AI & ML",
+            "time": "15:00",
+            "activity": "Workshop: Tic Tac Toe Game",
             "type": "Workshop"
           },
           {
-            "time": "19:00",
-            "activity": "Dinner",
+            "time": "16:00",
+            "activity": "Workshop: Rock Paper Scissors",
+            "type": "Workshop"
+          },
+          {
+            "time": "17:00",
+            "activity": "Workshop: Unlearn Unit Testing",
+            "type": "Workshop"
+          }
+        ]
+      },
+      "day2": {
+        "title": "April 28 - Saturday",
+        "events": [
+          {
+            "time": "10:00",
+            "activity": "Mentor Sessions",
+            "type": "Mentoring"
+          },
+          {
+            "time": "14:00",
+            "activity": "Lunch",
             "type": "Food"
+          },
+          {
+            "time": "16:30",
+            "activity": "Project Presentations",
+            "type": "Presentation"
+          },
+          {
+            "time": "17:30",
+            "activity": "Closing Speech",
+            "type": "Closing"
           }
         ]
       }

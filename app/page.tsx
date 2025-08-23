@@ -164,10 +164,9 @@ export default function HackathonPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">{t('program.title')}</h2>
-            <h3 className="text-2xl md:text-2xl font-light text-primary text-center mb-12">{t('program.tbd')}</h3>
+             {/* <h3 className="text-2xl md:text-2xl font-light text-primary text-center mb-12">{t('program.tbd')}</h3> */}
             
             {/* Program Schedule - Coming Soon */}
-            {/* 
             <div className="space-y-6">
               <div className="bg-card rounded-lg border p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
@@ -181,18 +180,7 @@ export default function HackathonPage() {
                       return events.map((event: any, index: number) => (
                         <div key={index} className="flex flex-col sm:flex-row justify-between items-start sm:items-center py-3 border-b border-border/50 last:border-b-0 gap-2">
                           <span className="text-muted-foreground text-sm sm:text-base">{event.time} - {event.activity}</span>
-                          <Badge 
-                            variant={event.type === 'Başlangıcı' || event.type === 'Start' ? 'default' : 
-                                    event.type === 'Konuşma' || event.type === 'Speech' ? 'outline' : 
-                                    event.type === 'Networking' ? 'secondary' : 
-                                    event.type === 'Kodlama' || event.type === 'Coding' ? 'default' : 
-                                    event.type === 'Yemek' || event.type === 'Food' ? 'outline' : 
-                                    event.type === 'Mentorluk' || event.type === 'Mentoring' ? 'secondary' : 
-                                    event.type === 'Workshop' ? 'default' : 'outline'}
-                            className="whitespace-nowrap"
-                          >
-                            {event.type}
-                          </Badge>
+                          <Badge className="whitespace-nowrap">{event.type}</Badge>
                         </div>
                       ))
                     }
@@ -213,16 +201,7 @@ export default function HackathonPage() {
                       return events.map((event: any, index: number) => (
                         <div key={index} className="flex flex-col sm:flex-row justify-between items-start sm:items-center py-3 border-b border-border/50 last:border-b-0 gap-2">
                           <span className="text-muted:foreground text-sm sm:text-base">{event.time} - {event.activity}</span>
-                          <Badge 
-                            variant={event.type === 'Başlangıcı' || event.type === 'Start' ? 'default' : 
-                                    event.type === 'Konuşma' || event.type === 'Speech' ? 'outline' : 
-                                    event.type === 'Yemek' || event.type === 'Food' ? 'outline' : 
-                                    event.type === 'Mentorluk' || event.type === 'Mentoring' ? 'secondary' : 
-                                    event.type === 'Workshop' ? 'default' : 'outline'}
-                            className="whitespace-nowrap"
-                          >
-                            {event.type}
-                          </Badge>
+                          <Badge className="whitespace-nowrap">{event.type}</Badge>
                         </div>
                       ))
                     }
@@ -231,7 +210,6 @@ export default function HackathonPage() {
                 </div>
               </div>
             </div>
-            */}
           </div>
         </div>
       </section>

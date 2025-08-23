@@ -33,57 +33,67 @@
     "tbd": "TBD",
     "schedule": {
       "day1": {
-        "title": "27 Nisan - Cuma",
+        "title": "27 Nisan - Cumartesi",
         "events": [
           {
-            "time": "18:00",
+            "time": "08:30",
             "activity": "Kayıt ve Karşılama",
             "type": "Başlangıç"
           },
           {
-            "time": "19:00",
+            "time": "09:00",
             "activity": "Açılış Konuşması",
             "type": "Konuşma"
           },
           {
-            "time": "20:00",
-            "activity": "Takım Oluşturma",
-            "type": "Networking"
-          },
-          {
-            "time": "21:00",
+            "time": "09:30",
             "activity": "Hackathon Başlangıcı",
             "type": "Kodlama"
+          },
+          {
+            "time": "13.00",
+            "activity": "Öğle Yemeği",
+            "type": "Yemek"
+          },
+          {
+            "time": "15.00",
+            "activity": "Workshop: Tic Tac Toe Game",
+            "type": "Workshop"
+          },
+          {
+            "time": "16.00",
+            "activity": "Workshop: Rock Paper Scissors",
+            "type": "Workshop"
+          },
+          {
+            "time": "17.00",
+            "activity": "Workshop: Unlearn Unit Testing",
+            "type": "Workshop"
           }
         ]
       },
       "day2": {
-        "title": "28 Nisan - Cumartesi",
+        "title": "28 Nisan - Pazar",
         "events": [
-          {
-            "time": "09:00",
-            "activity": "Kahvaltı",
-            "type": "Yemek"
-          },
           {
             "time": "10:00",
             "activity": "Mentor Seansları",
             "type": "Mentorluk"
           },
           {
-            "time": "13:00",
+            "time": "14:00",
             "activity": "Öğle Yemeği",
             "type": "Yemek"
           },
           {
-            "time": "14:00",
-            "activity": "Workshop: AI & ML",
-            "type": "Workshop"
+            "time": "16:30",
+            "activity": "Proje Sunumları",
+            "type": "Sunumlar"
           },
           {
-            "time": "19:00",
-            "activity": "Akşam Yemeği",
-            "type": "Yemek"
+            "time": "17:30",
+            "activity": "Kapanış Konuşması",
+            "type": "Kapanış"
           }
         ]
       }
