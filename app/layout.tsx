@@ -3,6 +3,8 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import Script from 'next/script'
 import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 export const metadata: Metadata = {
   title: "naal'hack | Türkiye'nin ilk liseler arası hackathonu",
@@ -53,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -69,7 +71,11 @@ html {
         `}</style>
       </head>
       <body>
-        {children}
+        <ErrorBoundary>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ErrorBoundary>
         <Script
           src="https://tally.so/widgets/embed.js"
           strategy="afterInteractive"

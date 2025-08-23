@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "about": "Hakkında",
+    "program": "Program",
+    "register": "Kayıt",
+    "sponsors": "Sponsorlar",
+    "faq": "SSS"
+  },
+  "hero": {
+    "date": "27-28 Nisan 2024",
+    "location": "Atölye Üsküdar",
+    "register": "Kayıt Ol",
+    "sponsor": "Sponsor Ol",
+    "discord": "Discord",
+    "devpost": "Devpost"
+  },
+  "about": {
+    "title": "Etkinlik Hakkında",
+    "description": "Kafein dolu, uykusuz 48 saat boyunca İstanbul'un dört bir yanından gelen öğrenciler, inanılmaz ödüller kazanma şansı için beyin fırtınası yapacak, hayal edebilecekleri her şeyi inşa edecek, test edecek ve sunacaklar. Ayrıca, profesyonel mentorlar ve mühendislerle etkileşim kurmak ve onlarla tanışmak için bolca zamanınız olacak. İşe alım uzmanları ve sponsorların harika teknoloji konuşmalarını ve eğitimlerini dinleyebileceksiniz."
+  },
+  "eventArea": {
+    "title": "Etkinlik Alanı",
+    "description": "Atölye Üsküdar, girişimcilere ve yarışmalara katılmak isteyenlere eğitim, ekipman, sarf malzeme ve mentorluk desteği sunan bir ekosistemdir. Üsküdar Belediyesi ve İSTKA desteğiyle kurulan merkez, Ar-Ge, yenilik ve girişimcilik kültürünü yaygınlaştırmayı hedeflemektedir.",
+    "features": {
+      "participants": "200+ Katılımcı",
+      "internet": "Yüksek Hızlı İnternet",
+      "equipment": "Modern Ekipmanlar",
+      "creative": "Yaratıcı Alanlar"
+    }
+  },
+  "program": {
+    "title": "Etkinlik Programı",
+    "tbd": "TBD",
+    "schedule": {
+      "day1": {
+        "title": "27 Nisan - Cuma",
+        "events": [
+          {
+            "time": "18:00",
+            "activity": "Kayıt ve Karşılama",
+            "type": "Başlangıç"
+          },
+          {
+            "time": "19:00",
+            "activity": "Açılış Konuşması",
+            "type": "Konuşma"
+          },
+          {
+            "time": "20:00",
+            "activity": "Takım Oluşturma",
+            "type": "Networking"
+          },
+          {
+            "time": "21:00",
+            "activity": "Hackathon Başlangıcı",
+            "type": "Kodlama"
+          }
+        ]
+      },
+      "day2": {
+        "title": "28 Nisan - Cumartesi",
+        "events": [
+          {
+            "time": "09:00",
+            "activity": "Kahvaltı",
+            "type": "Yemek"
+          },
+          {
+            "time": "10:00",
+            "activity": "Mentor Seansları",
+            "type": "Mentorluk"
+          },
+          {
+            "time": "13:00",
+            "activity": "Öğle Yemeği",
+            "type": "Yemek"
+          },
+          {
+            "time": "14:00",
+            "activity": "Workshop: AI & ML",
+            "type": "Workshop"
+          },
+          {
+            "time": "19:00",
+            "activity": "Akşam Yemeği",
+            "type": "Yemek"
+          }
+        ]
+      }
+    }
+  },
+  "registration": {
+    "title": "Kayıt Ol",
+    "description": "Türkiye'nin en büyük hackathon etkinliğine katılmak için hemen kayıt olun ve geleceğin teknolojilerini şekillendirme fırsatını kaçırmayın!",
+    "button": "Hemen Kayıt Ol"
+  },
+  "sponsors": {
+    "title": "Sponsorlarımız",
+    "partnerships": "İşbirlikleri",
+    "sponsorText": "Etkinliğimize sponsor olmak ve teknoloji topluluğuyla buluşmak ister misiniz?",
+    "sponsorButton": "Sponsor Ol"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "questions": [
+      {
+        "question": "Hackathon nedir?",
+        "answer": "Hackathon, temel olarak, organizatörler tarafından belirlenen bir konuyla ilgili olarak kısıtlı bir süre içinde ürün geliştirdiğimiz bir yarışma formatıdır. İki gün sürecek olan hackathon etkinliğimize katılacak ve atölyelere katılma fırsatı bulacak, alanında uzman kişilerle tanışacaksınız."
+      },
+      {
+        "question": "Etkinlik nerede gerçekleştirilecek?",
+        "answer": "Etkinliğimiz, 27-28 Nisan tarihlerinde Üsküdar Belediyesi'ne bağlı Girişimcilik ve İnovasyon Merkezi olan Atölye Üsküdar'da gerçekleştirilecektir. Ancak, ödül dağıtımı 3 Mayıs Cuma günü Nevzat Ayaz Anadolu Lisesi Konferans Salonu'nda yapılacaktır."
+      },
+      {
+        "question": "Katılım ücreti var mı?",
+        "answer": "Hayır, etkinliğimiz tamamen ücretsiz olacaktır. Tek yapmanız gereken kayıt olmaktır."
+      },
+      {
+        "question": "Davranış kuralları var mı?",
+        "answer": "Evet, Major League Hacking Davranış Kuralları'na uyuyoruz."
+      },
+      {
+        "question": "Kimler katılabilir?",
+        "answer": "Türkiye'de örgün eğitimine devam eden 9-12. sınıf veya hazırlık okuyan lise öğrencileri ile 15-18 yaş aralığındaki açık lise öğrencileri katılabilir."
+      },
+      {
+        "question": "Bir donanım laboratuvarınız olacak mı?",
+        "answer": "Evet! Naal'Hack sadece yazılım odaklı olmayacak, bu nedenle katılımcılarımıza AtölyeÜsküdar bünyesinde bulunan FAB-LAB'i kullanma imkanı sağlanacaktır. Ancak, ürününüzü geliştirmek için gereken yan ürünleri (Arduino, Led Ekran vb.) kendiniz temin etmeniz gerekecektir."
+      },
+      {
+        "question": "Seyahat masraflarını karşılayacak mısınız?",
+        "answer": "Maalesef, Naal'Hack katılımcıları için herhangi bir seyahat geri ödemesi yapılmayacaktır."
+      },
+      {
+        "question": "Bir takıma ihtiyacım var mı?",
+        "answer": "Hayır, böyle bir zorunluluk bulunmuyor. İsterseniz takımınızı oluşturup katılabilir veya yarışma başlamadan önce yeni arkadaşlar edinip bir takım kurabilirsiniz!"
+      },
+      {
+        "question": "Ücretsiz yiyecek, içecek ve kahve olacak mı?",
+        "answer": "Elbette, yemek ve içecek molaları olacaktır. Ayrıca sınırsız kahve ve atıştırmalıklar da sağlayacağız."
+      },
+      {
+        "question": "Yanımda ne getirmeliyim?",
+        "answer": "Öğrenci olduğunuzu gösteren bir belge, bilgisayar, şarj aleti ve projenizi yapmak için ihtiyacınız olan her şey."
+      },
+      {
+        "question": "Gece konaklama olacak mı?",
+        "answer": "Maalesef, Atölye Üsküdar'ın alan anlaşmalarından dolayı gece konaklaması yapılamayacak, yani katılımcılarımızın 1. gün sonunda eve gidip 2. gün sabahında tekrar alana dönmesi gerekecek. Ancak gece konaklamasını mümkün kılmak için elimizden geleni yapıyoruz."
+      },
+      {
+        "question": "Yarışmada ne yapabilirim?",
+        "answer": "Her şey mümkün! Bir web sitesi tasarlayabilir, mobil uygulama geliştirebilir, programlanabilir bir devre kartı üretebilirsiniz. Kısacası, ne yapacağınız tamamen hayal gücünüze bağlı! Jüriler, projeleri yaratıcılık, teknik beceri ve sağladığı fayda açısından değerlendirecektir."
+      },
+      {
+        "question": "Takımlarda kişi sınırı var mı?",
+        "answer": "Takımlar maksimum 4 kişi ile sınırlı olacaktır."
+      },
+      {
+        "question": "Programlamada yeni isem ne olacak?",
+        "answer": "Programlamada yeni başlayanlar katılabilir. Bu konuda bir sınırlamamız bulunmuyor. Etkinliğimizin ilk günü seminerler olacak."
+      },
+      {
+        "question": "Yapacağım projede kısıtlamalar nedir?",
+        "answer": "Geliştidiğniz proje yasadışı olmamalı, MLH Davranış Kuralları'na uygun olmalı, etkinlik alanını ve katılımcıları tehlikeye atmamalıdır."
+      }
+    ]
+  },
+  "social": {
+    "title": "Bizi Takip Edin",
+    "description": "Güncel duyurular ve etkinlik haberleri için sosyal medya hesaplarımızı takip edin!",
+    "instagram": "Instagram",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2024 Nevzat Ayaz Anadolu Lisesi Hackathon Turnuvası. | Bu proje GPLv3 ile lisanslanmıştır.",
+    "opensource": "Açık Kaynak: GitHub"
+  },
+  "eventEndedModal": {
+    "title": "🎉 Etkinlik Sona Erdi!",
+    "description": "Naal'Hack 2024'ü başarıyla tamamladık. Bu süreçte bizimle olan organizasyon ekibindeki arkadaşlarımıza, iki gün boyunca Gebze'den Bağcılar'a katılım sağlayan katılımcılarımıza teşekkür ederiz. İstanbul'da ve Türkiye'de ilk kez liseler arası hackathon yarışması düzenlemiş olduk. Hack Club etkinliğimize maddi desteğiyle katkı sağladı. Katılımcılarımızdan ücret talep etmeden ve okulumuzun bütçesinden hiç para harcamadan bu etkinliği gerçekleştirdik.",
+    "description2": "Özeleştirilerimizi yaparak, gelecekte benzer etkinliklerde daha iyi bir organizasyon sunmak için çalışmalarımıza devam edeceğiz.",
+    "instagramButton": "Instagram Postunu Gör",
+    "closeButton": "Kapat"
+  }
+} 

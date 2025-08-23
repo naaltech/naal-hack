@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "about": "About",
+    "program": "Program",
+    "register": "Register",
+    "sponsors": "Sponsors",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "date": "April 27-28, 2024",
+    "location": "Atölye Üsküdar",
+    "register": "Register Now",
+    "sponsor": "Become a Sponsor",
+    "discord": "Discord",
+    "devpost": "Devpost"
+  },
+  "about": {
+    "title": "About the Event",
+    "description": "During 48 caffeine-filled, sleepless hours, students from all over Istanbul will brainstorm, build, test, and present everything they can imagine for a chance to win incredible prizes. Additionally, you'll have plenty of time to interact and network with professional mentors and engineers. You'll be able to listen to great tech talks and trainings from recruitment experts and sponsors."
+  },
+  "eventArea": {
+    "title": "Event Area",
+    "description": "Atölye Üsküdar is an ecosystem that provides education, equipment, consumables, and mentoring support to entrepreneurs and those who want to participate in competitions. The center, established with the support of Üsküdar Municipality and İSTKA, aims to spread R&D, innovation, and entrepreneurship culture.",
+    "features": {
+      "participants": "200+ Participants",
+      "internet": "High-Speed Internet",
+      "equipment": "Modern Equipment",
+      "creative": "Creative Spaces"
+    }
+  },
+  "program": {
+    "title": "Event Program",
+    "tbd": "TBD",
+    "schedule": {
+      "day1": {
+        "title": "April 27 - Friday",
+        "events": [
+          {
+            "time": "18:00",
+            "activity": "Registration and Welcome",
+            "type": "Start"
+          },
+          {
+            "time": "19:00",
+            "activity": "Opening Speech",
+            "type": "Speech"
+          },
+          {
+            "time": "20:00",
+            "activity": "Team Formation",
+            "type": "Networking"
+          },
+          {
+            "time": "21:00",
+            "activity": "Hackathon Begins",
+            "type": "Coding"
+          }
+        ]
+      },
+      "day2": {
+        "title": "April 28 - Saturday",
+        "events": [
+          {
+            "time": "09:00",
+            "activity": "Breakfast",
+            "type": "Food"
+          },
+          {
+            "time": "10:00",
+            "activity": "Mentor Sessions",
+            "type": "Mentoring"
+          },
+          {
+            "time": "13:00",
+            "activity": "Lunch",
+            "type": "Food"
+          },
+          {
+            "time": "14:00",
+            "activity": "Workshop: AI & ML",
+            "type": "Workshop"
+          },
+          {
+            "time": "19:00",
+            "activity": "Dinner",
+            "type": "Food"
+          }
+        ]
+      }
+    }
+  },
+  "registration": {
+    "title": "Register Now",
+    "description": "Don't miss the opportunity to participate in Turkey's biggest hackathon event and shape the technologies of the future!",
+    "button": "Register Now"
+  },
+  "sponsors": {
+    "title": "Our Sponsors",
+    "partnerships": "Partnerships",
+    "sponsorText": "Would you like to sponsor our event and meet with the technology community?",
+    "sponsorButton": "Become a Sponsor"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "What is a hackathon?",
+        "answer": "A hackathon is essentially a competition format where we develop products related to a topic determined by organizers within a limited time. You will participate in our two-day hackathon event, have the opportunity to attend workshops, and meet experts in their fields."
+      },
+      {
+        "question": "Where will the event take place?",
+        "answer": "Our event will take place at Atölye Üsküdar, an Entrepreneurship and Innovation Center affiliated with Üsküdar Municipality, on April 27-28. However, the award ceremony will be held on May 3, Friday, at Nevzat Ayaz Anadolu Lisesi Conference Hall."
+      },
+      {
+        "question": "Is there a participation fee?",
+        "answer": "No, our event will be completely free. All you need to do is register."
+      },
+      {
+        "question": "Are there behavior rules?",
+        "answer": "Yes, we comply with Major League Hacking Code of Conduct."
+      },
+      {
+        "question": "Who can participate?",
+        "answer": "High school students in grades 9-12 or preparatory classes continuing their formal education in Turkey, and open high school students between the ages of 15-18 can participate."
+      },
+      {
+        "question": "Will you have a hardware laboratory?",
+        "answer": "Yes! Naal'Hack won't be just software-focused, so participants will have the opportunity to use the FAB-LAB within Atölye Üsküdar. However, you'll need to provide the necessary accessories (Arduino, LED Display, etc.) yourself to develop your product."
+      },
+      {
+        "question": "Will you cover travel expenses?",
+        "answer": "Unfortunately, no travel reimbursement will be provided for Naal'Hack participants."
+      },
+      {
+        "question": "Do I need a team?",
+        "answer": "No, there's no such requirement. You can form your team and participate, or make new friends and form a team before the competition starts!"
+      },
+      {
+        "question": "Will there be free food, drinks, and coffee?",
+        "answer": "Of course, there will be meal and drink breaks. We'll also provide unlimited coffee and snacks."
+      },
+      {
+        "question": "What should I bring with me?",
+        "answer": "A document showing you're a student, computer, charger, and everything you need to make your project."
+      },
+      {
+        "question": "Will there be overnight accommodation?",
+        "answer": "Unfortunately, due to Atölye Üsküdar's area agreements, overnight accommodation won't be possible, so participants will need to go home at the end of the 1st day and return to the venue in the morning of the 2nd day. However, we're doing our best to make overnight accommodation possible."
+      },
+      {
+        "question": "What can I do in the competition?",
+        "answer": "Everything is possible! You can design a website, develop a mobile app, create a programmable circuit board. In short, what you'll do is entirely up to your imagination! Juries will evaluate projects based on creativity, technical skill, and the benefit they provide."
+      },
+      {
+        "question": "Is there a person limit in teams?",
+        "answer": "Teams will be limited to a maximum of 4 people."
+      },
+      {
+        "question": "What if I'm new to programming?",
+        "answer": "Beginners in programming can participate. We don't have any limitations in this regard. There will be seminars on the first day of our event."
+      },
+      {
+        "question": "What are the restrictions on my project?",
+        "answer": "Your developed project should not be illegal, should comply with MLH Code of Conduct, and should not endanger the event area and participants."
+      }
+    ]
+  },
+  "social": {
+    "title": "Follow Us",
+    "description": "Follow our social media accounts for current announcements and event news!",
+    "instagram": "Instagram",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2024 Nevzat Ayaz Anadolu Lisesi Hackathon Tournament. | This project is licensed under GPLv3.",
+    "opensource": "Open Source: GitHub"
+  },
+  "eventEndedModal": {
+    "title": "🎉 Event Ended!",
+    "description": "We have successfully completed Naal'Hack 2024. We would like to thank our friends in the organization team who were with us during this process, and our participants who participated from Gebze to Bağcılar for two days. We organized the first inter-high school hackathon competition in Istanbul and Turkey. Hack Club contributed to our event with financial support. We organized this event without charging our participants and without spending any money from our school's budget.",
+    "description2": "By making self-criticism, we will continue our work to provide better organization in similar events in the future.",
+    "instagramButton": "View Instagram Post",
+    "closeButton": "Close"
+  }
+} 

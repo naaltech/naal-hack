@@ -4,9 +4,11 @@ import { useState, useEffect } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { SiInstagram } from "react-icons/si"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function EventEndedModal() {
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     // Show modal when component mounts (page loads)
@@ -18,13 +20,12 @@ export default function EventEndedModal() {
       <DialogContent className="sm:max-w-lg md:max-w-xl">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-center text-primary">
-            🎉 Etkinlik Sona Erdi!
+            {t('eventEndedModal.title')}
           </DialogTitle>
           <DialogDescription className="text-center space-y-3 pt-3">
             <p className="text-sm leading-relaxed">
-              Naal'Hack 2024'ü başarıyla tamamladık. Bu süreçte bizimle olan organizasyon ekibindeki arkadaşlarımıza, iki gün boyunca Gebze'den Bağcılar'a katılım sağlayan katılımcılarımıza teşekkür ederiz.
-İstanbul'da ve Türkiye'de ilk kez liseler arası hackathon yarışması düzenlemiş olduk. Hack Club etkinliğimize maddi desteğiyle katkı sağladı. Katılımcılarımızdan ücret talep etmeden ve okulumuzun bütçesinden hiç para harcamadan bu etkinliği gerçekleştirdik.<br/><br/>
-Özeleştirilerimizi yaparak, gelecekte benzer etkinliklerde daha iyi bir organizasyon sunmak için çalışmalarımıza devam edeceğiz. 
+              {t('eventEndedModal.description')}<br/><br/>
+              {t('eventEndedModal.description2')}
             </p>
           </DialogDescription>
         </DialogHeader>
@@ -37,7 +38,7 @@ export default function EventEndedModal() {
               className="flex items-center justify-center gap-2"
             >
               <SiInstagram className="w-5 h-5" />
-              Instagram Postunu Gör
+              {t('eventEndedModal.instagramButton')}
             </a>
           </Button>
           <Button 
@@ -45,7 +46,7 @@ export default function EventEndedModal() {
             onClick={() => setIsOpen(false)}
             className="w-full"
           >
-            Kapat
+            {t('eventEndedModal.closeButton')}
           </Button>
         </div>
       </DialogContent>
