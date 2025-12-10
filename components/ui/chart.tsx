@@ -105,11 +105,27 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip
 
-interface ChartTooltipContentProps<TValue extends number | string = number, TName extends string = string>
-  extends Omit<TooltipProps<TValue, TName>, 'content'> {
+interface ChartTooltipContentProps<TValue extends number | string = number, TName extends string = string> {
+  active?: boolean
+  payload?: Array<{
+    dataKey: string
+    name: string
+    value: TValue
+    color?: string
+    fill?: string
+    strokeDasharray?: string | number
+    payload?: any
+    [key: string]: any
+  }>
+  className?: string
+  indicator?: "line" | "dot" | "dashed"
   hideLabel?: boolean
   hideIndicator?: boolean
-  indicator?: "line" | "dot" | "dashed"
+  label?: string
+  labelFormatter?: (label: any, payload: any) => React.ReactNode
+  labelClassName?: string
+  formatter?: (value: TValue, name: TName, item: any, index: number, payload: any) => React.ReactNode
+  color?: string
   nameKey?: string
   labelKey?: string
 }
