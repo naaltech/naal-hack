@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
+import type { TooltipProps } from "recharts"
 
 import { cn } from "@/lib/utils"
 
@@ -118,7 +119,7 @@ function ChartTooltipContent<TValue extends number | string = number, TName exte
   color,
   nameKey,
   labelKey,
-}: RechartsPrimitive.TooltipProps<TValue, TName> & {
+}: TooltipProps<TValue, TName> & {
   hideLabel?: boolean
   hideIndicator?: boolean
   indicator?: "line" | "dot" | "dashed"
