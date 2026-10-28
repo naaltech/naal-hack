@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, MapPin, Users, Trophy, Clock, Code, Lightbulb, Zap } from "lucide-react"
-import { SiInstagram, SiDiscord, SiX, SiLinkedin } from "react-icons/si"
+import { SiInstagram, SiDiscord, SiX } from "react-icons/si"
+import { FaLinkedin } from "react-icons/fa6"
 import EventMap from "@/components/EventMap"
 import EventEndedModal from "@/components/EventEndedModal"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
@@ -351,7 +352,7 @@ export default function HackathonPage() {
               </Button>
               <Button asChild variant="outline" size="lg" className="flex items-center gap-2 bg-transparent">
                 <a href="https://www.linkedin.com/company/naaltech/" target="_blank" rel="noopener noreferrer">
-                  <SiLinkedin className="w-5 h-5" />
+                  <FaLinkedin className="w-5 h-5" />
                   {t('social.linkedin')}
                 </a>
               </Button>
