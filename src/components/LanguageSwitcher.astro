@@ -1,0 +1,32 @@
+---
+import LanguageIcon from "heroicons/24/outline/language.svg"
+import Button from "@/components/ui/Button.astro"
+import { languagePaths, type Language } from "@/lib/i18n"
+
+interface Props {
+  lang: Language
+}
+
+const nextLanguage = Astro.props.lang === "tr" ? "en" : "tr"
+---
+
+<Button
+  href={languagePaths[nextLanguage]}
+  data-language={nextLanguage}
+  variant="outline"
+  size="sm"
+  class="flex items-center gap-2"
+>
+  <LanguageIcon class="h-4 w-4" />
+  {nextLanguage.toUpperCase()}
+</Button>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-language]").forEach((link) => {
+    link.addEventListener("click", () => {
+      try {
+        localStorage.setItem("language", link.dataset.language!)
+      } catch {}
+    })
+  })
+</script>

@@ -17,13 +17,13 @@ Official website for Naal'Hack - Turkey's first inter-high school hackathon comp
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with App Router
+- **Framework**: Astro (static output, no client framework)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **UI Components**: Tailwind CSS & native HTML elements
+- **UI Components**: Astro components & native HTML elements
 - **Icons**: Heroicons
-- **Map**: React Leaflet
-- **Fonts**: Geist Sans & Mono
+- **Map**: Leaflet
+- **Fonts**: Geist Sans
 
 ## Getting Started
 
@@ -37,13 +37,13 @@ npm install
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Open [http://localhost:4321](http://localhost:4321) in your browser.
 
 ## Build
 
 ```bash
 npm run build
-npm start
+npm run preview
 ```
 
 ## License

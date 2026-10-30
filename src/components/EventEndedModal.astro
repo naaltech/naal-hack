@@ -1,0 +1,66 @@
+---
+import CameraIcon from "heroicons/24/outline/camera.svg"
+import XMarkIcon from "heroicons/24/outline/x-mark.svg"
+import Button from "@/components/ui/Button.astro"
+import { translations, type Language } from "@/lib/i18n"
+
+interface Props {
+  lang: Language
+}
+
+const t = translations[Astro.props.lang].eventEndedModal
+---
+
+<dialog
+  data-event-ended-modal
+  aria-labelledby="event-ended-title"
+  aria-describedby="event-ended-description"
+  class="bg-background text-foreground animate-in fade-in-0 zoom-in-95 backdrop:animate-in backdrop:fade-in-0 m-auto w-full max-w-[calc(100%-2rem)] rounded-lg border shadow-lg duration-200 backdrop:bg-black/50 sm:max-w-lg md:max-w-xl"
+>
+  <div class="relative grid gap-4 p-6">
+    <div class="flex flex-col gap-2">
+      <h2 id="event-ended-title" class="text-xl font-bold leading-none text-center text-primary">
+        {t.title}
+      </h2>
+      <p id="event-ended-description" class="text-muted-foreground text-sm leading-relaxed text-center pt-3">
+        {t.description}<br /><br />
+        {t.description2}
+      </p>
+    </div>
+    <form method="dialog" class="flex flex-col gap-3 pt-4">
+      <Button
+        href="https://www.instagram.com/p/C6mnxt4tUeN/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
+      >
+        <CameraIcon class="w-5 h-5" />
+        {t.instagramButton}
+      </Button>
+      <Button variant="outline" class="w-full">
+        {t.closeButton}
+      </Button>
+      <button
+        class="ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden"
+      >
+        <XMarkIcon class="size-4" />
+        <span class="sr-only">Close</span>
+      </button>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>("[data-event-ended-modal]")
+
+  if (dialog) {
+    dialog.showModal()
+
+    // The inner wrapper fills the dialog, so only ::backdrop clicks land here
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) {
+        dialog.close()
+      }
+    })
+  }
+</script>

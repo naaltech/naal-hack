@@ -1,0 +1,63 @@
+---
+import "@/styles/globals.css"
+import { languagePaths, type Language } from "@/lib/i18n"
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
+
+const title = "naal'hack | Türkiye'nin ilk liseler arası hackathonu"
+const description = "Naal'Hack resmi websitesi. Türkiye'nin liseler arası ilk hackathon yarışması. 27-28 Nisan 2024"
+const keywords = ["hackathon", "lise", "öğrenci", "coding", "programming", "teknoloji", "yarışma", "istanbul", "naalhack", "naal"]
+const organization = "Nevzat Ayaz Anadolu Lisesi"
+const canonical = new URL(languagePaths[lang], Astro.site)
+---
+
+<!doctype html>
+<html lang={lang} class="[scrollbar-gutter:stable] has-[dialog[open]]:overflow-hidden">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(",")} />
+    <meta name="author" content={organization} />
+    <meta name="creator" content={organization} />
+    <meta name="publisher" content={organization} />
+    <meta name="robots" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href={canonical} />
+    {Object.entries(languagePaths).map(([language, path]) => (
+      <link rel="alternate" hreflang={language} href={new URL(path, Astro.site)} />
+    ))}
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo_text.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="naal'hack" />
+    <meta property="og:locale" content={lang === "tr" ? "tr_TR" : "en_US"} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL("/logo_text.png", Astro.site)} />
+    <meta name="twitter:creator" content="@naalteknoloji" />
+    {lang === "tr" && (
+      <script is:inline>
+        // Kaydedilen dil tercihini içerik çizilmeden önce uygula
+        try {
+          if (localStorage.getItem("language") === "en") {
+            location.replace("/en/" + location.hash)
+          }
+        } catch {}
+      </script>
+    )}
+  </head>
+  <body>
+    <slot />
+    <script is:inline src="https://tally.so/widgets/embed.js" async></script>
+  </body>
+</html>

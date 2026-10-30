@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "@/lib/utils"
+
+type Props = HTMLAttributes<"span">
+
+const { class: className, ...props } = Astro.props
+---
+
+<span
+  class={cn(
+    "inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-2 py-0.5 text-xs font-medium text-primary-foreground w-fit whitespace-nowrap shrink-0 gap-1 overflow-hidden",
+    className
+  )}
+  {...props}
+>
+  <slot />
+</span>

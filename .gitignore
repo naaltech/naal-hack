@@ -3,12 +3,11 @@
 # dependencies
 /node_modules
 
-# next.js
-/.next/
-/out/
+# astro
+/.astro/
 
 # production
-/build
+/dist/
 
 # debug
 npm-debug.log*
@@ -19,11 +18,5 @@ yarn-error.log*
 # env files
 .env*
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
 .package-lock.json
 package-lock.json
