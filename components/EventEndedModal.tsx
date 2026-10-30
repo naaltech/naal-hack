@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { SiInstagram } from "react-icons/si"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { CameraIcon } from "@heroicons/react/24/outline"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { cn } from "@/lib/utils"
 
 export default function EventEndedModal() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,17 +31,15 @@ export default function EventEndedModal() {
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-3 pt-4">
-          <Button asChild className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-            <a 
-              href="https://www.instagram.com/p/C6mnxt4tUeN/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
-            >
-              <SiInstagram className="w-5 h-5" />
-              {t('eventEndedModal.instagramButton')}
-            </a>
-          </Button>
+          <a
+            href="https://www.instagram.com/p/C6mnxt4tUeN/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(buttonVariants(), "w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600")}
+          >
+            <CameraIcon className="w-5 h-5" />
+            {t('eventEndedModal.instagramButton')}
+          </a>
           <Button 
             variant="outline" 
             onClick={() => setIsOpen(false)}

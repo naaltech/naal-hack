@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/LanguageContext'
 import { Button } from '@/components/ui/button'
-import { Languages } from 'lucide-react'
+import { LanguageIcon } from '@heroicons/react/24/outline'
 
 export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage()
@@ -18,7 +18,7 @@ export default function LanguageSwitcher() {
       size="sm"
       className="flex items-center gap-2"
     >
-      <Languages className="h-4 w-4" />
+      <LanguageIcon className="h-4 w-4" />
       {language === 'tr' ? 'EN' : 'TR'}
     </Button>
   )

@@ -1,15 +1,26 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, Users, Trophy, Clock, Code, Lightbulb, Zap } from "lucide-react"
-import { SiInstagram, SiDiscord, SiX } from "react-icons/si"
-import { FaLinkedin } from "react-icons/fa6"
+import {
+  AtSymbolIcon,
+  BoltIcon,
+  BriefcaseIcon,
+  CalendarIcon,
+  CameraIcon,
+  // ChatBubbleLeftRightIcon,
+  ClockIcon,
+  CodeBracketIcon,
+  LightBulbIcon,
+  MapPinIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline"
 import EventMap from "@/components/EventMap"
 import EventEndedModal from "@/components/EventEndedModal"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { cn } from "@/lib/utils"
 
 // FAQ data will be loaded dynamically from translations
 
@@ -74,11 +85,11 @@ export default function HackathonPage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2 text-base sm:text-lg text-foreground mb-8">
               <div className="flex items-center gap-2">
-                <Calendar className="h-5 w-5 text-primary" />
+                <CalendarIcon className="h-5 w-5 text-primary" />
                 <span>{t('hero.date')}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-primary" />
+                <MapPinIcon className="h-5 w-5 text-primary" />
                 <span>{t('hero.location')}</span>
               </div>
             </div>
@@ -86,26 +97,15 @@ export default function HackathonPage() {
               <Button data-tally-open="mZaeAV" size="lg" className="bg-primary hover:bg-primary/90">
                 {t('hero.register')}
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
-              >
-                <a href="mailto:hack@naal.org.tr">
-                  {t('hero.sponsor')}
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <a href="https://discord.gg/7pS5NsAPWV" target="_blank" rel="noopener noreferrer">
-                  {t('hero.discord')}
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <a href="https://naal-hack.devpost.com" target="_blank" rel="noopener noreferrer">
-                  {t('hero.devpost')}
-                </a>
-              </Button>
+              <a href="mailto:hack@naal.org.tr" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent")}>
+                {t('hero.sponsor')}
+              </a>
+              {/* <a href="https://discord.gg/7pS5NsAPWV" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                {t('hero.discord')}
+              </a> */}
+              <a href="https://naal-hack.devpost.com" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                {t('hero.devpost')}
+              </a>
             </div>
           </div>
         </div>
@@ -135,19 +135,19 @@ export default function HackathonPage() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-primary" />
+                    <UsersIcon className="h-5 w-5 text-primary" />
                     <span>{t('eventArea.features.participants')}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="h-5 w-5 text-primary" />
+                    <BoltIcon className="h-5 w-5 text-primary" />
                     <span>{t('eventArea.features.internet')}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Code className="h-5 w-5 text-primary" />
+                    <CodeBracketIcon className="h-5 w-5 text-primary" />
                     <span>{t('eventArea.features.equipment')}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Lightbulb className="h-5 w-5 text-primary" />
+                    <LightBulbIcon className="h-5 w-5 text-primary" />
                     <span>{t('eventArea.features.creative')}</span>
                   </div>
                 </div>
@@ -171,7 +171,7 @@ export default function HackathonPage() {
             <div className="space-y-6">
               <div className="bg-card rounded-lg border p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <ClockIcon className="h-5 w-5 text-primary" />
                   {t('program.schedule.day1.title')}
                 </h3>
                 <div className="space-y-3">
@@ -192,7 +192,7 @@ export default function HackathonPage() {
 
               <div className="bg-card rounded-lg border p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4 flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <ClockIcon className="h-5 w-5 text-primary" />
                   {t('program.schedule.day2.title')}
                 </h3>
                 <div className="space-y-3">
@@ -281,16 +281,9 @@ export default function HackathonPage() {
               <p className="text-lg text-muted-foreground mb-6">
                 {t('sponsors.sponsorText')}
               </p>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
-              >
-                <a href="mailto:hack@naal.org.tr">
-                  {t('sponsors.sponsorButton')}
-                </a>
-              </Button>
+              <a href="mailto:hack@naal.org.tr" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent")}>
+                {t('sponsors.sponsorButton')}
+              </a>
             </div>
           </div>
         </div>
@@ -301,7 +294,7 @@ export default function HackathonPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">{t('faq.title')}</h2>
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion className="space-y-4">
               {(() => {
                 const questions = t('faq.questions')
                 if (Array.isArray(questions)) {
@@ -332,30 +325,22 @@ export default function HackathonPage() {
               {t('social.description')}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild variant="outline" size="lg" className="flex items-center gap-2 bg-transparent">
-                <a href="https://instagram.com/naalhack" target="_blank" rel="noopener noreferrer">
-                  <SiInstagram className="w-5 h-5" />
-                  {t('social.instagram')}
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="flex items-center gap-2 bg-transparent">
-                <a href="https://discord.gg/7pS5NsAPWV/" target="_blank" rel="noopener noreferrer">
-                  <SiDiscord className="w-5 h-5" />
-                  {t('social.discord')}
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="flex items-center gap-2 bg-transparent">
-                <a href="https://x.com/naalteknoloji/" target="_blank" rel="noopener noreferrer">
-                  <SiX className="w-5 h-5" />
-                  {t('social.twitter')}
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="flex items-center gap-2 bg-transparent">
-                <a href="https://www.linkedin.com/company/naaltech/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin className="w-5 h-5" />
-                  {t('social.linkedin')}
-                </a>
-              </Button>
+              <a href="https://instagram.com/naalhack" target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "bg-transparent")}>
+                <CameraIcon className="w-5 h-5" />
+                {t('social.instagram')}
+              </a>
+              {/* <a href="https://discord.gg/7pS5NsAPWV/" target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "bg-transparent")}>
+                <ChatBubbleLeftRightIcon className="w-5 h-5" />
+                {t('social.discord')}
+              </a> */}
+              <a href="https://x.com/naalteknoloji/" target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "bg-transparent")}>
+                <AtSymbolIcon className="w-5 h-5" />
+                {t('social.twitter')}
+              </a>
+              <a href="https://www.linkedin.com/company/naaltech/" target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "bg-transparent")}>
+                <BriefcaseIcon className="w-5 h-5" />
+                {t('social.linkedin')}
+              </a>
             </div>
           </div>
         </div>

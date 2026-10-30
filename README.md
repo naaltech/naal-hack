@@ -20,8 +20,8 @@ Official website for Naal'Hack - Turkey's first inter-high school hackathon comp
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **UI Components**: Radix UI primitives
-- **Icons**: Lucide React & React Icons
+- **UI Components**: Tailwind CSS & native HTML elements
+- **Icons**: Heroicons
 - **Map**: React Leaflet
 - **Fonts**: Geist Sans & Mono
 

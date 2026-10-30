@@ -1,48 +1,52 @@
 "use client"
 
 import * as React from "react"
-import * as DialogPrimitive from "@radix-ui/react-dialog"
-import { XIcon } from "lucide-react"
+import { XMarkIcon } from "@heroicons/react/24/outline"
 
 import { cn } from "@/lib/utils"
 
+const DialogContext = React.createContext<{
+  titleId: string
+  descriptionId: string
+  close: () => void
+} | null>(null)
+
+function useDialog() {
+  const context = React.useContext(DialogContext)
+
+  if (!context) {
+    throw new Error("Dialog parts must be used within a Dialog")
+  }
+
+  return context
+}
+
 function Dialog({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Root>) {
-  return <DialogPrimitive.Root data-slot="dialog" {...props} />
-}
+  open = false,
+  onOpenChange,
+  children,
+}: {
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+  children: React.ReactNode
+}) {
+  const id = React.useId()
 
-function DialogTrigger({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
-  return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
-}
+  const context = React.useMemo(
+    () => ({
+      titleId: `${id}-title`,
+      descriptionId: `${id}-description`,
+      close: () => onOpenChange?.(false),
+    }),
+    [id, onOpenChange]
+  )
 
-function DialogPortal({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Portal>) {
-  return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />
-}
+  if (!open) {
+    return null
+  }
 
-function DialogClose({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Close>) {
-  return <DialogPrimitive.Close data-slot="dialog-close" {...props} />
-}
-
-function DialogOverlay({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
   return (
-    <DialogPrimitive.Overlay
-      data-slot="dialog-overlay"
-      className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
-        className
-      )}
-      {...props}
-    />
+    <DialogContext.Provider value={context}>{children}</DialogContext.Provider>
   )
 }
 
@@ -51,32 +55,54 @@ function DialogContent({
   children,
   showCloseButton = true,
   ...props
-}: React.ComponentProps<typeof DialogPrimitive.Content> & {
+}: React.ComponentProps<"dialog"> & {
   showCloseButton?: boolean
 }) {
+  const { titleId, descriptionId, close } = useDialog()
+  const dialogRef = React.useRef<HTMLDialogElement>(null)
+
+  React.useEffect(() => {
+    const dialog = dialogRef.current
+
+    if (dialog && !dialog.open) {
+      dialog.showModal()
+    }
+  }, [])
+
   return (
-    <DialogPortal data-slot="dialog-portal">
-      <DialogOverlay />
-      <DialogPrimitive.Content
-        data-slot="dialog-content"
-        className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg",
-          className
-        )}
-        {...props}
-      >
+    <dialog
+      ref={dialogRef}
+      data-slot="dialog-content"
+      aria-labelledby={titleId}
+      aria-describedby={descriptionId}
+      onClose={close}
+      onClick={(event) => {
+        // The inner wrapper fills the dialog, so only ::backdrop clicks land here
+        if (event.target === event.currentTarget) {
+          close()
+        }
+      }}
+      className={cn(
+        "bg-background text-foreground animate-in fade-in-0 zoom-in-95 backdrop:animate-in backdrop:fade-in-0 m-auto w-full max-w-[calc(100%-2rem)] rounded-lg border shadow-lg duration-200 backdrop:bg-black/50 sm:max-w-lg",
+        className
+      )}
+      {...props}
+    >
+      <div className="relative grid gap-4 p-6">
         {children}
         {showCloseButton && (
-          <DialogPrimitive.Close
+          <button
+            type="button"
             data-slot="dialog-close"
-            className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+            onClick={close}
+            className="ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
           >
-            <XIcon />
+            <XMarkIcon />
             <span className="sr-only">Close</span>
-          </DialogPrimitive.Close>
+          </button>
         )}
-      </DialogPrimitive.Content>
-    </DialogPortal>
+      </div>
+    </dialog>
   )
 }
 
@@ -103,12 +129,12 @@ function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function DialogTitle({
-  className,
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Title>) {
+function DialogTitle({ className, ...props }: React.ComponentProps<"h2">) {
+  const { titleId } = useDialog()
+
   return (
-    <DialogPrimitive.Title
+    <h2
+      id={titleId}
       data-slot="dialog-title"
       className={cn("text-lg leading-none font-semibold", className)}
       {...props}
@@ -119,9 +145,12 @@ function DialogTitle({
 function DialogDescription({
   className,
   ...props
-}: React.ComponentProps<typeof DialogPrimitive.Description>) {
+}: React.ComponentProps<"div">) {
+  const { descriptionId } = useDialog()
+
   return (
-    <DialogPrimitive.Description
+    <div
+      id={descriptionId}
       data-slot="dialog-description"
       className={cn("text-muted-foreground text-sm", className)}
       {...props}
@@ -131,13 +160,9 @@ function DialogDescription({
 
 export {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogOverlay,
-  DialogPortal,
   DialogTitle,
-  DialogTrigger,
 }
